@@ -1,7 +1,7 @@
 import React from 'react';
 import imagenProducto from '../assets/images/acdcbeer.png';
 
-function LastMovieInDb(){
+function UltimaBirra(){
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
@@ -20,4 +20,4 @@ function LastMovieInDb(){
     )
 }
 
-export default LastMovieInDb;
+export default UltimaBirra;

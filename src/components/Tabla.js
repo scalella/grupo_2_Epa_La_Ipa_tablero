@@ -1,5 +1,5 @@
 import React from 'react';
-import ChartRow from './ChartRow';
+import FilaTabla from './FilaTabla';
 
 let tableRowsData = [
     {
@@ -20,7 +20,7 @@ let tableRowsData = [
 ]
 
 
-function Chart (){
+function Tabla (){
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -48,7 +48,7 @@ function Chart (){
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
+                                return <FilaTabla { ...row} key={i}/>
                             })
                             }
 
@@ -61,4 +61,4 @@ function Chart (){
     )
 }
 
-export default Chart;
+export default Tabla;

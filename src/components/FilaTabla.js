@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function ChartRow(props){
+function FilaTabla(props){
     return (
                 <tr>
                     <td>{props.Title}</td>
@@ -21,4 +21,4 @@ function ChartRow(props){
     
         
 
-export default ChartRow;
+export default FilaTabla;

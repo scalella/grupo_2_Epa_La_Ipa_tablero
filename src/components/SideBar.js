@@ -1,13 +1,13 @@
 import React from 'react';
 import image from '../assets/images/solo logo.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
-import ContentRowMovies from './ContentRowMovies';
+import Marcas from './Marcas';
+import UltimaBirra from './UltimaBirra';
+import Totales from './Totales';
 import NotFound from './NotFound';
-import Chart from './Chart'
+import Tabla from './Tabla'
 import {Link, Route, Switch} from 'react-router-dom';
-import './SideBar.css'
+
 
 function SideBar(){
     return(
@@ -40,7 +40,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/marcas">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Estilos de cerveza</span>
                     </Link>
@@ -48,14 +48,14 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/ultimo-creado">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Detalle último producto</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/chart">
+                <Link className="nav-link" to="/productos">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Listado de todas las birras</span></Link>
                 </li>
@@ -65,41 +65,27 @@ function SideBar(){
             </ul>
             {/*<!-- End of Sidebar -->*/}
 
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
 
-            {/*<!-- End Microdesafio 2 -->*/}
+    
             <Switch>
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/marcas">
+                    <Marcas />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/ultimo-creado">
+                    <UltimaBirra />
                 </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
-                </Route>
-                <Route path="/chart">
-                    <Chart />
+                {/* <Route path="/totales">
+                    <Totales />
+                </Route> */}
+                <Route path="/productos">
+                    <Tabla />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
+       
         </React.Fragment>
     )
 }
