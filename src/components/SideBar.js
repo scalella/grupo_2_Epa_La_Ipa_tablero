@@ -42,7 +42,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/marcas">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Estilos de cerveza</span>
+                        <span>Todas nuestras marcas</span>
                     </Link>
                 </li>
 

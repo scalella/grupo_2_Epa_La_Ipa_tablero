@@ -16,7 +16,7 @@ class Marcas extends Component {
         return respuesta.json();
       })
       .then((marcas) => {
-        console.log(marcas);
+        // console.log(marcas);
         this.setState({ marcas });
       })
       .catch((error) => console.log(error));
